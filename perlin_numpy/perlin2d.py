@@ -89,8 +89,7 @@ def generate_fractal_noise_2d(
     amplitude = 1
     for _ in range(octaves):
         noise += amplitude * generate_perlin_noise_2d(
-            shape, (frequency*res[0], frequency*res[1]), tileable, interpolant
-        )
+            shape, (frequency*res[0], frequency*res[1]), tileable, interpolant)
         frequency *= lacunarity
         amplitude *= persistence
     return noise
